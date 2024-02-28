@@ -1,5 +1,5 @@
 # Stock-market-predictions
-Data Loading and Preprocessing:
+1. Data Loading and Preprocessing:
 
 The code imports necessary libraries like pandas, numpy, matplotlib, pandas_datareader, and scikit-learn for data manipulation, visualization, and machine learning tasks.
 It reads the historical stock price data of AAPL from a CSV file using pandas read_csv function.
@@ -11,13 +11,15 @@ Moving Average Calculation and Visualization:
 
 Two moving averages (MA) are calculated over the closing price data: a 100-day MA (ma100) and a 200-day MA (ma200).
 These moving averages are plotted along with the original closing price data for visualization using Matplotlib.
-Model Building and Training:
+
+2. Model Building and Training:
 
 A Long Short-Term Memory (LSTM) neural network model is constructed using Keras.
 The model is compiled with the Adam optimizer and Mean Squared Error (MSE) loss function.
 The training data is prepared by creating sequences of 100 days of historical data as input features (X_train) and the next day's closing price as the target (y_train).
 The model is trained with the training data for 100 epochs.
-Model Evaluation and Testing:
+
+3.Model Evaluation and Testing:
 
 The trained model is saved to a file named 'keras_model.h5'.
 For forecasting, the last 100 days of the training data are appended with the testing data to form a larger dataset (final_df).
